@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Playground - Interactive Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Particle Playground</h1>
+            <p>Click, drag, and interact to create beautiful particle effects</p>
+        </header>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="particleCount">Particle Count:</label>
+                <input type="range" id="particleCount" min="50" max="500" value="200">
+                <span id="countValue">200</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="particleSize">Particle Size:</label>
+                <input type="range" id="particleSize" min="1" max="10" value="3">
+                <span id="sizeValue">3</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="0.5" max="5" step="0.1" value="1">
+                <span id="speedValue">1.0</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="connectionDistance">Connection Distance:</label>
+                <input type="range" id="connectionDistance" min="50" max="200" value="100">
+                <span id="distanceValue">100</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="colorMode">Color Mode:</label>
+                <select id="colorMode">
+                    <option value="rainbow">Rainbow</option>
+                    <option value="monochrome">Monochrome</option>
+                    <option value="fire">Fire</option>
+                    <option value="ocean">Ocean</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+            
+            <div class="control-group" id="customColorGroup" style="display: none;">
+                <label for="customColor">Custom Color:</label>
+                <input type="color" id="customColor" value="#ff6b6b">
+            </div>
+            
+            <div class="control-group">
+                <button id="resetBtn">Reset Canvas</button>
+                <button id="clearBtn">Clear Particles</button>
+            </div>
+        </div>
+        
+        <canvas id="particleCanvas"></canvas>
+        
+        <div class="info">
+            <p>💡 <strong>Tips:</strong> Click to add particles • Drag to create trails • Move mouse to interact</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
